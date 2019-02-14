@@ -4,12 +4,12 @@ const connectionString = 'mongodb://localhost/fruits'
 
 mongoose.connect(connectionString)
 
-mongodb.on('connected', function() {
+mongoose.connection.on('connected', function() {
     console.log(`Mongoose is connected at: ${connectionString}`);
 });
-mongoose.on('disconnected', function(){
+mongoose.connection.on('disconnected', function(){
     console.log('Mongoose is disconnected')
 });
-mongoose.on('error', function(error){
+mongoose.connection.on('error', function(error){
 console.log('Something went wrong with Mongoose', error)
 });
