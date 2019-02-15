@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>See Fruit Details</title>
+</head>
+<body>
+    <h1> This is the Fruits Show Page</h1>
+    <!-- this will take us back to the fruits index page -->
+    <a href="/fruits">Go Back to Fruits</a>
+    <h5><%= foundFruit.name %></h5>
+    <p><%= foundFruit.color %></p>
+    <p>
+        <% if (foundFruit.readyToEat){ %>
+            Ready to Eat
+            <% } else { %>
+                Not Ready to Eat
+                <% } %>
+    </p>
+</body>
+</html>

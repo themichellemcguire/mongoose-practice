@@ -12,6 +12,9 @@ require('./db/db');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+// Allows us to tell server js which http verb we need
+// via a query string ?_method=DELETE, ?_method=PUT
+//  _method is variable that stores a value - PUT or DELETE
 app.use(methodOverride('_method'));
 
 
